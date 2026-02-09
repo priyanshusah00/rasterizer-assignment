@@ -1,106 +1,43 @@
-# Rasterization Assignment
+# Rasterizer Assignment – Computer Graphics
 
-You have to implement the following algorithms:
+**Course Code:** BTCS-T-PE-028  
+**Assignment:** 1  
+**Language Used:** JavaScript (ECMAScript)  
+**Platform:** HTML5 Canvas  
 
-- Bresenham Line Drawing Algorithm
-- Midpoint Circle Drawing Algorithm
-- DDA Line Drawing Algorithm
-- Wu's Line Drawing Algorithm (Bonus)
+---
 
-## Prerequisites
+## 📌 Objective
 
-A modern web browser (Chrome, Firefox, Safari, Edge)
+The objective of this assignment is to implement fundamental **rasterization algorithms** used in computer graphics for drawing lines and circles on a pixel-based display.
 
-## Project Structure
+---
 
-```
-rasterize-js/
-├── index.html
-├── LineRasterizerTest.js
-└── BresenhamRasterizer.js
-```
+## 🧮 Algorithms Implemented
 
-## Running the Test
+The following algorithms have been implemented from scratch (without using built-in drawing functions):
 
-1. Place all three files in the same directory
-2. Open `index.html` in your web browser (double-click or right-click →
-Open With)
-3. The visualization will appear automatically
+1. **DDA (Digital Differential Analyzer) Line Drawing Algorithm**
+2. **Bresenham Line Drawing Algorithm**
+3. **Midpoint Circle Drawing Algorithm**
+4. **Wu’s Line Drawing Algorithm** *(Bonus – Anti-aliased line)*
 
-## Using the Framework
+---
 
-When you open the page, you'll see:
-- A 50×50 grid where each cell represents a pixel
-- A thin **red line** showing the ideal continuous line between two
-endpoints
-- **Blue filled cells** showing your rasterization algorithm's output
-- Two **red circle endpoints** that you can click and drag to test
-different line orientations
+## 🎨 Visual Differentiation
 
-## Implementing Your Algorithm
+Each algorithm is rendered using a **distinct color** to clearly differentiate them during evaluation:
 
-1. Create a new JavaScript file for your rasterizer (e.g., `BresenhamRasterizer.js`):
+| Algorithm | Color Used |
+|---------|------------|
+| DDA Line | Red |
+| Bresenham Line | Green |
+| Midpoint Circle | Blue |
+| Wu Line (Bonus) | Yellow |
 
-```javascript
-class MyRasterizer {
-    rasterize(p1, p2) {
-        // Your algorithm here
-        // p1 and p2 are Point objects with .x and .y properties
-        // Return an array of Point objects
-        const pixels = [];
-        
-        // Your implementation...
-        
-        return pixels;
-    }
-}
-```
+Text labels are also displayed on the canvas for clarity.
 
-2. Add your file to `index.html` (before `LineRasterizerTest.js`):
+---
 
-```html
-<script src="BresenhamRasterizer.js"></script> <!-- Add this line -->
-<script src="LineRasterizerTest.js"></script>
-```
+## 📂 Folder Structure (JavaScript Branch)
 
-3. Edit `LineRasterizerTest.js` to use your implementation:
-
-```javascript
-// In the setup() function, change:
-rasterizer = new BresenhamRasterizer();
-```
-
-4. Refresh your browser to see your results
-
-## Tips
-
-- The `Point` class is defined in `BresenhamRasterizer.js` and has `.x`
-and `.y` properties
-- Grid coordinates range from 0 to 49 for both x and y
-- Each Point you return will be rendered as a filled cell in the grid
-- Use your browser's developer console (F12) to debug with
-`console.log()`
-- Drag the endpoints to test your algorithm with different slopes and
-orientations
-- The red reference line shows what the "ideal" continuous line looks
-like
-
-## Testing Different Algorithms
-
-Implement the following files:
-
-- `BresenhamRasterizer.js`
-- `DDARasterizer.js`
-- `WuRasterizer.js`
-- `MidpointCircleRasterizer.js`
-
-and switch between them by changing which one is instantiated in
-`setup()` function of `LineRasterizerTest.js`. For midpoint, the points
-`p1` and `p2` is the diameter of the circle.
-
-## Debugging
-
-If you encounter errors:
-- Press F12 to open browser developer tools and check the Console tab
-- Make sure all three files are in the same directory
-- Hard refresh the page (Ctrl+Shift+R or Cmd+Shift+R) after making changes

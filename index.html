@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Rasterization Test</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        main {
-            text-align: center;
-        }
-        canvas {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Rasterizer Assignment</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main>
-        <h1>Line Rasterization Test</h1>
-        <p>Drag the endpoints to test the algorithm</p>
-    </main>
-    
-    <!-- Import p5.js from CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
-    
-    <!-- Import the rasterizer implementation -->
-    <script src="BresenhamRasterizer.js"></script>
-    
-    <!-- Import the main sketch -->
-    <script src="LineRasterizerTest.js"></script>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>
